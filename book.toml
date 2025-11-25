@@ -1,10 +1,8 @@
 [book]
 authors = ["Lukas Wirth"]
 language = "en"
-multilingual = false
 src = "src"
 title = "The Little Book of Rust Macros"
-edition = "2018"
 
 [build]
 create-missing = true
