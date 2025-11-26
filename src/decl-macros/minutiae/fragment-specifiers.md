@@ -363,7 +363,7 @@ This means if this capture is passed onto another macro invocation that captures
 macro_rules! it_is_opaque {
     (()) => { "()" };
     (($tt:tt)) => { concat!("$tt is ", stringify!($tt)) };
-    ($vis:vis ,) => { it_is_opaque!( ($vis) ); }
+    ($vis:vis ,) => { it_is_opaque!( ($vis) ) }
 }
 fn main() {
     // this prints "$tt is ", as the recursive calls hits the second branch with
@@ -374,3 +374,4 @@ fn main() {
 
 [`macro_rules`]: ../macro_rules.md
 [Visibility qualifier]: https://doc.rust-lang.org/reference/visibility-and-privacy.html
+
